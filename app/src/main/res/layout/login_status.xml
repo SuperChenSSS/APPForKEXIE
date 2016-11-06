@@ -30,24 +30,52 @@
                 android:text="@string/resultKEXIE"
                 android:textColor="#ffffff" />
         </LinearLayout>
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
+                android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/KEXIEContent"
+                android:text="第三届科技节欢迎您的到来"
                 android:textSize="30sp"
                 android:textColor="@android:color/black"
                 android:textStyle="bold"
                 android:layout_marginTop="30dp"
-                android:layout_marginStart="20dp"/>
+                android:layout_marginStart="20dp"
+                android:gravity="center_horizontal"/>
             <TextView
+                android:id="@+id/errno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
                 android:textColor="@android:color/black"
+                android:textSize="25sp"
+                android:layout_below="@id/title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="130dp"
+                android:gravity="center_horizontal"
                 />
-        </LinearLayout>
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="25sp"
+                android:layout_below="@id/errno"
+                android:gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                />
+            <TextView
+                android:id="@+id/data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="25sp"
+                android:layout_below="@id/info"
+                android:gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                />
+        </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

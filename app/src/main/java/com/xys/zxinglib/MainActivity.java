@@ -2,13 +2,11 @@ package com.xys.zxinglib;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.Toast;
 import com.xys.libzxing.zxing.activity.CaptureActivity;
 
 import org.apache.http.HttpEntity;
@@ -65,19 +63,26 @@ public class MainActivity extends Activity {
             Bundle bundle = data.getExtras();
             String scanResult = bundle.getString("result");
             String str = HTTPRequest(scanResult);
-            String OverallStr = "";
+            //String OverallStr = "";
+            String errno_json= "",info_json = "",data_json = "";
             //解析JSON
             try {
                 JSONObject jsonObject = new JSONObject(str);
-                String errno_json = jsonObject.getString("errno");
-                String info_json  = jsonObject.getString("info");
-                String data_json  = jsonObject.getString("data");
-                OverallStr = "errno:" + errno_json + "\n" + "info:" + info_json + "\n"
-                            + "data:" + data_json;
+                errno_json = jsonObject.getString("errno");
+                info_json  = jsonObject.getString("info");
+                data_json  = jsonObject.getString("data");
             }catch (Exception e){
                 e.printStackTrace();
             }
-            Toast.makeText(MainActivity.this,OverallStr,Toast.LENGTH_LONG).show();
+            try {
+                LoginStatus loginStatus = new LoginStatus(errno_json, info_json, data_json);
+                bundle.putSerializable("loginStatus", loginStatus);
+                Intent intent = new Intent(MainActivity.this, LoginReceive.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }catch (Exception e){
+                e.printStackTrace();
+            }
         }
     }
 
