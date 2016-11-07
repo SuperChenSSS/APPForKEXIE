@@ -29,6 +29,13 @@
                 android:textSize="25sp"
                 android:text="@string/resultKEXIE"
                 android:textColor="#ffffff" />
+            <Button
+                android:id="@+id/Home"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/home"
+                android:layout_weight="0.05" />
         </LinearLayout>
         <RelativeLayout
             android:layout_width="match_parent"
@@ -37,12 +44,12 @@
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="第三届科技节欢迎您的到来"
+                android:text="@string/titleContent"
                 android:textSize="30sp"
                 android:textColor="@android:color/black"
                 android:textStyle="bold"
-                android:layout_marginTop="30dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginStart="100dp"
                 android:gravity="center_horizontal"/>
             <TextView
                 android:id="@+id/errno"
@@ -52,7 +59,7 @@
                 android:textSize="25sp"
                 android:layout_below="@id/title"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="130dp"
+                android:layout_marginTop="50dp"
                 android:gravity="center_horizontal"
                 />
             <TextView

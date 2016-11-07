@@ -23,10 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-        </activity>
-        <activity android:name=".LoginReceive">
-        </activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".LoginReceive"></activity>
+        <activity android:name=".Home"></activity>
     </application>
 
 </manifest>

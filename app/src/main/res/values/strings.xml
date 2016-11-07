@@ -7,4 +7,6 @@
     <string name="info">关于</string>
     <string name="scan_KEXIE">科协扫码</string>
     <string name="resultKEXIE">扫码结果</string>
+    <string name="CHUPIN">出品：科协计算机部\n界面设计：唐元清\n逻辑设计：陈梦杨\n版本号：V1.0\n如遇到问题请联系我\n    QQ：914971667</string>
+    <string name="titleContent">第三届科技节\n欢迎您的到来</string>
 </resources>

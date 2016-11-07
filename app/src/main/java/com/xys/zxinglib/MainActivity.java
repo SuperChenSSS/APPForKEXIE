@@ -44,6 +44,14 @@ public class MainActivity extends Activity {
                 .penaltyDeath()
                 .build());
         Button scanBarCodeButton = (Button) this.findViewById(R.id.btn_scan_barcode);
+        Button aboutStatusButton = (Button) this.findViewById(R.id.info);
+        aboutStatusButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,Home.class);
+                startActivity(intent);
+            }
+        });
         scanBarCodeButton.setOnClickListener(new OnClickListener() {
 
             @Override
