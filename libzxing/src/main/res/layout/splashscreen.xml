@@ -3,29 +3,26 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:gravity="center|center"
+    android:gravity="center"
     android:background="@android:color/white"
     android:orientation="vertical"
     android:weightSum="1">
-
     <TextView android:text="@string/WelcomeTD"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:typeface="serif"
         android:textStyle="bold"
-        android:textSize="45sp"
+        android:textSize="50sp"
         android:textColor="@android:color/holo_blue_dark"
         android:id="@+id/versionNumber"
         android:gravity="center_horizontal">
     </TextView>
 
-    <ImageView android:layout_marginTop="5dp"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:scaleType="centerInside"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:id="@+id/logo"
         android:src="@drawable/largelogo">
     </ImageView>
